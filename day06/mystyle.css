@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: rgb(0, 255, 0);
+}
+
+h2 {
+    color: yellow;
+    font-size: 20px;
+}

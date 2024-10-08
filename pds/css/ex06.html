@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div {
+            font-size: 64px;
+            background-color: black;
+            color: white;
+
+            margin-top: 8px;
+        }
+
+        .c1 > .c2 {
+            color: red;
+            
+        }
+
+        .c1 .c3 {
+            color: blue;
+        }
+
+        
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="c1">
+        C1
+        <div class="c2">
+            c2
+        </div>
+
+        <div>
+            <div class="c2">
+                c2
+            </div>
+        </div>
+    </div>
+
+
+    <div class="c1">
+        C1
+        <div class="c3">
+            c3
+        </div>
+        <div>
+            <div class="c3">
+                c3
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+    
+</body>
+</html>

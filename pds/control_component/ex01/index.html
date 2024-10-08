@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="http://gears001.iptime.org:21070/sample/add" method="GET">
+        <label for="a">Parameter a:</label>
+        <input type="text" id="a" name="a" value="1">
+        <br><br>
+        <label for="b">Parameter b:</label>
+        <input type="text" id="b" name="b" value="2">
+        <br><br>
+        <input type="submit" value="Submit">
+        <button type="submit">Submit </button>
+
+        <input type="reset" value="Reset">
+        <button type="reset">Reset </button>
+
+        <input id="a" type="image" src="/res/first.jpg">
+
+
+        <button type="reset" >
+
+            <img src="/res/first.jpg">
+
+        </button>
+
+    </form>
+
+    <script>
+        document.querySelector('#a').addEventListener(''
+            e.preventDefault();
+            console.log('submit');
+        });
+        // document.querySelector('form').addEventListener('submit', function(e) {
+        //     e.preventDefault();
+        //     console.log('submit');
+        // });
+
+        // document.querySelector('form').addEventListener('reset', function(e) {
+        //     e.preventDefault();
+        //     console.log('reset');
+        // });
+
+
+
+    
+</body>
+</html>

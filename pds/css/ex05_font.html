@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>외부폰트</title>
+    <style>
+
+        @font-face {
+            font-family: 'DungGeunMo';
+            src: url('res/DungGeunMo.ttf') format('truetype');
+        }
+
+        .font1 {
+            font-family: 'consolas', sans-serif;
+            font-size: 30px;
+        }
+        .font2 {
+            font-style: italic;
+        }
+        .font3 {
+            font-weight: bold;
+        }
+
+        .font4 {
+            font-family: 'DungGeunMo';
+            background-color: blue;
+            color: white;
+
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="font1" >
+        consolas
+    </div>
+
+    <div class="font1 font2" >
+        consolas
+    </div>
+
+    <div class="font1 font3" >
+        consolas
+    </div>
+
+
+    
+
+    <div class="font1 font4" >
+        DungGeunMo
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 8px;
+            display: inline-block;
+            text-align: right;
+            line-height: 100px;
+            font-size: 20px;
+
+        }
+
+        .box:nth-child(1) {
+            background-color: red;
+            color: white;
+        }
+        
+        .box:nth-child(2) {
+            background-color: blue;
+            color: yellow;
+        }
+        
+        .box:nth-child(3) {
+            background-color: green;
+            color: white;
+        }
+
+        .container {
+            border: 1px solid black;
+            display: inline-block; /* 컨텐츠 크기에 맞춤 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            Red
+        </div>
+
+        <div class="box">
+            Blue
+        </div>
+
+        <div class="box">
+            Green
+        </div>
+    </div>
+
+</body>
+
+</html>

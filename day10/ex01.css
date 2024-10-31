@@ -3,3 +3,66 @@
     height: 64px;
     border: 1px solid #000;
 }
+
+@keyframes textColorAnimation {
+    0% {
+        color: red;
+    }
+    30% {
+        color: green;
+    }
+    60% {
+        color : blue;
+    }
+    100% {
+        color: red;
+    }    
+}
+
+@keyframes scaleEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+@keyframes rotateEffect {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }    
+}
+
+@keyframes updownEffect {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }    
+}
+
+.animation-1 {
+    animation: textColorAnimation 3s infinite;
+}
+
+.animation-2 {
+    animation: scaleEffect 3s infinite;
+}
+.animation-3 {
+    animation: rotateEffect 3s infinite;
+}
+
+.animation-4 {
+    animation: updownEffect 3s infinite;
+}

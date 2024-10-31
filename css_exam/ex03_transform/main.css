@@ -1,0 +1,18 @@
+.main-screen {
+    width : 256px;
+    height : 256px;
+    background-color: black;
+}
+
+
+.box-1 {
+    background-color: red;
+    width: 32px;
+    height: 32px;
+}
+
+.box-2 {
+    background-color: green;
+    width: 32px;
+    height: 32px;
+}

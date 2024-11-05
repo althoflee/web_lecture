@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "btn1">PROMPT</button><br>
+    <button id = "btn2">confirm</button><br>
+    <button id = "btn3">alert</button><br>
+
+    <script>
+
+        document.querySelector("#btn3").addEventListener('click',()=> {
+            alert("hello web program")
+        })
+
+        document.querySelector("#btn2").addEventListener('click',()=> {
+            let rtn = confirm("확인 해요.")
+            console.log(rtn)
+        })
+
+        document.querySelector("#btn1").addEventListener('click',()=> {
+            let _input = prompt("이름을 입력하세요.","홍길동")
+            console.log("hello " + _input)
+
+        })
+
+    </script>
+
+
+    
+</body>
+</html>

@@ -66,3 +66,27 @@
 .animation-4 {
     animation: updownEffect 3s infinite;
 }
+
+.main-screen {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    background-color: #000;
+}
+.main-screen div {
+    position: inherit;
+}
+.box-red {
+    
+    width: 32px;
+    height: 32px;
+    background-color: red;
+}
+
+.box-green {    
+    width: 32px;
+    height: 32px;
+    background-color: greenyellow;
+}
+
+

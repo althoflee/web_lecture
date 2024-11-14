@@ -1,0 +1,5 @@
+.hover-effect {
+    background-color: #f0f0f0;
+    font-size: 2em;
+    transition: background-color 1.5s, font-size 1.5s;
+}

@@ -18,6 +18,7 @@ export default async function main() {
         _list.removeChild(_li)
     })
 
+    //list event handler
     _list.addEventListener('click',(evt)=> {
 
         if(evt.target.tagName == 'LI') {
@@ -30,6 +31,17 @@ export default async function main() {
             }
             evt.target.style.color = 'red'
             _selectorId = evt.target.getAttribute('data-id');
+        }
+    })
+    _list.addEventListener('mouseover',(evt)=> {
+        if(evt.target.tagName == 'LI') {
+            evt.target.classList.add('hover-effect')
+        }
+
+    })
+    _list.addEventListener('mouseout',(evt)=> {
+        if(evt.target.tagName == 'LI') {
+            evt.target.classList.remove('hover-effect')
         }
     })
 
@@ -54,6 +66,44 @@ export default async function main() {
         }
 
     });
+
+    document.querySelector('#btn-insert').addEventListener('click',()=> {
+        const itemArray = Array.from(_list.children)
+        const itemToInsert = itemArray.find(
+            item=> {
+                return item.getAttribute('data-id') == _selectorId
+            }
+
+        )
+        if(itemToInsert) {
+            let _li = document.createElement('li')
+            _li.innerText = "New Item " + counter++
+            _li.setAttribute("data-id",counter)
+            _list.insertBefore(_li,itemToInsert)
+        }
+    })
+
+    document.querySelector('#btn-insert-after',()=> {
+        //
+        const itemArray = Array.from(_list.children)
+        const itemToInsert = itemArray.find(
+            item=> {
+                return item.getAttribute('data-id') == _selectorId
+            }
+
+        )
+        if(itemToInsert) {
+            let _li = document.createElement('li')
+            _li.innerText = "New Item " + counter++
+            _li.setAttribute("data-id",counter)
+            
+            //itemToInsert.nextElementSibling; 사용
+            
+            //_list.insertBefore(_li,itemToInsert)
+        }
+    })
+
+
 
 
 }

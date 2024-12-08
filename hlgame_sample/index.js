@@ -1,9 +1,11 @@
+const base_url = 'http://cbhai01.iptime.org:17870/api/v2/challenge'
+
 export default async function main() {
     console.log("hello es6");
 
     const _tx_info = document.querySelector("#check .info-text")
     const btn_check = document.querySelector("#check button")
-    const base_url = 'http://cbhai01.iptime.org:17870/api/v2/challenge'
+    
 
     const _registerForm = document.querySelector("#register")
 

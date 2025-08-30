@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* * {
+            border : 1px solid black;
+        } */
+        body {
+            margin : 0px;
+         }
+        .inline-div {
+            width : 128px;
+            height : 128px;
+            border : 1px solid black;
+            margin-top : 2px;
+            display :inline;
+        }
+        .inline-block-div {
+            width : 128px;
+            height : 128px;
+            border : 1px solid black;
+            margin-top : 2px;
+            display :inline-block;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="inline-div" >inline div</div>
+        <div class="inline-div" >inline div</div>
+        <div class="inline-div" >inline div</div>
+    </div>
+    <div>
+        <div class="inline-block-div" >inline div</div>
+        <div class="inline-block-div" >inline div</div>
+        <div class="inline-block-div" style="display:none;" >inline div</div>
+        <div class="inline-block-div" >inline div</div>
+    </div>
+    
+</body>
+</html>

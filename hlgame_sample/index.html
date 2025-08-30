@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The HL Game Sample</title>
+    <style>
+        @import url('./main.css');
+    </style>
+</head>
+<body>
+    <div id="check">
+        <h2>check</h2>
+        <p class="info-text" ></p>
+        <button>check</button>
+    </div>
+
+    <div id="register">
+        <h2>register</h2>
+
+        <input type="text" placeholder="name" class="name" > <br/>
+        <input type="text" placeholder="studentId" class="studentId"> <br/>
+        <input type="text" placeholder="passwd" class="passwd" > <br/>
+        <button >ok</button>
+    </div>
+
+    <div id="start_hl" >
+        <h2>start_hl</h2>
+        <button>start</button>
+    </div>
+
+    <div id="game" >
+        <h2>game</h2>
+        <input type="text" placeholder="guess secret number" > <br/>
+        <button>ok</button>
+    </div>
+
+    <script type="module">
+        import main from './index.js'
+
+        main();
+
+
+    </script>    
+</body>
+</html>

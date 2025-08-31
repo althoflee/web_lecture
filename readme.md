@@ -1,10 +1,9 @@
-# html lecture 2024
+# Web Base Development Lesson Page
 
 ## liveServer SSL setup
 
 1. Install openssl
 ```bash
-
 brew install openssl # mac
 sudo apt-get install openssl
 ```
@@ -24,7 +23,7 @@ openssl req -new -x509 -keyout key.pem -out cert.pem -days 365 -nodes
 
 ctrl + , 
 
-vscode 에서 설정파일 열기  
+vscode 에서 설정파일 열기  `
 
 ```bash
 code .vscode/settings.json

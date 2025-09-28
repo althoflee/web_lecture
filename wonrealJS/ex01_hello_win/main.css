@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    /* overflow: hidden;
+    font-family: Monospace;
+    background-color: #000;
+    color: #fff; */
+}
+.hidden {
+    display: none;
+}
+
+/* 3D 창의 스타일 지정 */
+#main3dWindow {
+    width: 640px;
+    height: 480px;
+    border: 1px solid #555; /* 창 테두리 (선택 사항) */
+}

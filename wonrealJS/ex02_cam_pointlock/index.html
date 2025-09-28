@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Three.js FPS Camera Example</title>
+
+  <style>@import url('./main.css');</style>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- 3D 컨테이너 -->
+  <div id="main3DWindow" title="클릭하여 마우스 룩 활성화 (Pointer Lock)"></div>
+
+  <!-- 간단한 안내 -->
+  <div class="hint">
+    <b>조작</b> : 마우스 룩, <b>WASD/화살표</b> 이동, <b>Space</b> 점프, <b>Shift</b> 달리기<br/>
+    캔버스를 클릭하면 포인터락이 활성화됩니다.
+  </div>
+
+  <script type="module">
+    import main from './index.js';
+    main();
+  </script>
+</body>
+</html>

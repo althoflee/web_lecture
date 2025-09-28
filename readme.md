@@ -1,5 +1,7 @@
 # Web Base Development Lesson Page
 
+page url is https://althoflee.github.io/web_lecture. 
+
 ## liveServer SSL setup
 
 1. Install openssl
@@ -40,6 +42,8 @@ code .vscode/settings.json
 
 ```
 https://127.0.0.1:5500
+
+
 
 
 

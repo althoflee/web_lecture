@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Text Align Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .box {
+      border: 2px solid black;
+      width: 300px;
+      height: 100px;
+      margin: 15px 0;
+      padding: 5px;
+      background-color: #f9f9f9;
+    }
+
+    /* 수평 정렬 */
+    .left   { text-align: left; }
+    .center { text-align: center; }
+    .right  { text-align: right; }
+    .justify{ text-align: justify; }
+
+    /* 수직 정렬 */
+    .top    { line-height: 100px; vertical-align: top; }
+    .middle { line-height: 100px; vertical-align: middle; }
+    .bottom { line-height: 100px; vertical-align: bottom; }
+  </style>
+</head>
+<body>
+  <h1>Text Alignment Examples</h1>
+
+  <h2>수평 정렬</h2>
+  <div class="box left">Left Align (왼쪽 정렬)</div>
+  <div class="box center">Center Align (가운데 정렬)</div>
+  <div class="box right">Right Align (오른쪽 정렬)</div>
+  <div class="box justify">
+    Justify Align (양쪽 정렬)<br>
+    문단 양쪽이 맞춰져 보입니다.
+  </div>
+
+  <h2>수직 정렬</h2>
+  <div class="box" style="display: flex; align-items: flex-start; justify-content: center;">
+    Top Align (위쪽 정렬)
+  </div>
+  <div class="box" style="display: flex; align-items: center; justify-content: center;">
+    Middle Align (세로 중앙 정렬)
+  </div>
+  <div class="box" style="display: flex; align-items: flex-end; justify-content: center;">
+    Bottom Align (아래쪽 정렬)
+  </div>
+</body>
+</html>

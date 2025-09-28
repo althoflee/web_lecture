@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>overflow-wrap & word-break 비교 예제</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { margin-bottom: 6px; }
+    h2 { margin-top: 28px; margin-bottom: 10px; }
+    .desc { color: #444; margin-bottom: 14px; }
+
+    .box {
+      width: 280px;              /* 고정 너비로 넘침 확인 */
+      border: 3px solid #000;    /* 굵은 보더로 가시화 */
+      padding: 10px;
+      margin: 12px 0;
+      background: #f9f9f9;
+    }
+    .label { font-weight: bold; margin-bottom: 6px; }
+
+    /* overflow-wrap 비교 */
+    .ow-normal     { overflow-wrap: normal; }
+    .ow-break-word { overflow-wrap: break-word; } /* 표준: 긴 단어가 넘치면 단어 단위로 줄바꿈 허용 */
+    .ow-anywhere   { overflow-wrap: anywhere; }   /* 임의 위치라도 줄바꿈 허용(더 과감) */
+
+    /* word-break 비교 */
+    .wb-normal     { word-break: normal; }        /* 언어 규칙에 따름 */
+    .wb-break-all  { word-break: break-all; }     /* 글자 단위로 강제 분할(가장 과감) */
+    .wb-keep-all   { word-break: keep-all; }      /* CJK(한/중/일) 텍스트는 단어 내부 분할 금지 → 공백 기준으로만 줄바꿈 */
+    .wb-break-word { word-break: break-word; }    /* 비표준이지만 지원: 넘칠 때 단어 경계에서 분할(overflow-wrap: break-word와 유사) */
+
+    /* 보기 편하도록 긴 샘플 단어에 기본 스타일 */
+    .chip {
+      display: inline-block;
+      padding: 2px 6px;
+      border: 1px dashed #888;
+      background: #fff;
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>overflow-wrap & word-break 비교</h1>
+  <div class="desc">각 박스는 <b>폭 280px</b>로 고정되어 있습니다. 긴 단어/공백 없는 문자열이 있을 때 줄바꿈 동작 차이를 확인하세요.</div>
+
+  <!-- =========================== -->
+  <!-- overflow-wrap -->
+  <!-- =========================== -->
+  <h2>1) overflow-wrap</h2>
+  <div class="box ow-normal">
+    <div class="label">overflow-wrap: normal (기본)</div>
+    긴 영어 단어가 있을 때 기본적으로는 줄바꿈되지 않아 박스 밖으로 넘칠 수 있습니다.
+    <div class="chip">ThisIsAVeryVeryVeryLongWordWithoutAnySpacesThatWouldNormallyOverflow</div>
+  </div>
+
+  <div class="box ow-break-word">
+    <div class="label">overflow-wrap: break-word</div>
+    긴 영어 단어가 박스 너비를 넘치면 <b>단어 경계에서</b> 줄바꿈을 허용하여 넘침을 방지합니다.
+    <div class="chip">ThisIsAVeryVeryVeryLongWordWithoutAnySpacesThatWouldNormallyOverflow</div>
+  </div>
+
+  <div class="box ow-anywhere">
+    <div class="label">overflow-wrap: anywhere</div>
+    넘치지 않도록 <b>임의의 위치에서도</b> 줄바꿈을 허용합니다(가장 적극적).<br>
+    <div class="chip">ThisIsAVeryVeryVeryLongWordWithoutAnySpacesThatWouldNormallyOverflow</div>
+  </div>
+
+  <!-- Tip: anywhere vs break-word -->
+  <div class="desc">
+    💡 <b>anywhere</b>는 레이아웃 계산(내재 크기)에도 영향을 적게 주면서 임의 위치에서 줄을 바꾸는 반면,  
+    <b>break-word</b>는 기본적으로 단어 경계에서만 줄바꿈을 허용합니다.
+  </div>
+
+  <!-- =========================== -->
+  <!-- word-break -->
+  <!-- =========================== -->
+  <h2>2) word-break</h2>
+
+  <div class="box wb-normal">
+    <div class="label">word-break: normal</div>
+    언어(스크립트) 규칙에 따라 줄바꿈합니다. 영어는 공백/하이픈 등에서, CJK는 비교적 자유롭게 줄바꿈됩니다.<br>
+    <div class="chip">ThisIsAVeryVeryVeryLongWordWithoutAnySpacesThatWouldNormallyOverflow</div><br>
+    <div class="chip">한글은기본적으로문자경계에서줄바꿈이가능합니다</div>
+  </div>
+
+  <div class="box wb-break-all">
+    <div class="label">word-break: break-all</div>
+    <b>모든 문자 사이</b>에서 줄바꿈 가능(가장 과감). 영어 긴 단어도 글자 단위로 잘립니다.<br>
+    <div class="chip">ThisIsAVeryVeryVeryLongWordWithoutAnySpacesThatWouldNormallyOverflow</div><br>
+    <div class="chip">한글연속문자열도모두글자단위로분할됩니다</div>
+  </div>
+
+  <div class="box wb-keep-all">
+    <div class="label">word-break: keep-all</div>
+    CJK(한/중/일) 텍스트는 <b>단어 내부 분할 금지</b>. 공백이 없으면 한 줄로 유지하려고 하며, 필요하면 오버플로될 수 있습니다.<br>
+    <div class="chip">한글공백없이긴문자열한글공백없이긴문자열한글공백없이긴문자열</div><br>
+    영어(공백 단위로 줄바꿈): <span class="chip">This is a normal English sentence with spaces only.</span>
+  </div>
+
+  <div class="box wb-break-word">
+    <div class="label">word-break: break-word (비표준, 널리 지원)</div>
+    넘칠 경우 <b>단어 경계에서만</b> 분할하려 시도합니다(브라우저별 구현 차이 있음).<br>
+    <div class="chip">ThisIsAVeryVeryVeryLongWordWithoutAnySpacesThatWouldNormallyOverflow</div>
+  </div>
+
+  <h2>요약</h2>
+  <ul>
+    <li><b>overflow-wrap</b>: “넘칠 때” 줄을 바꿀지 결정 (<code>break-word</code>, <code>anywhere</code>)</li>
+    <li><b>word-break</b>: 줄바꿈의 <u>기본 규칙</u>을 정의 (<code>normal</code>, <code>break-all</code>, <code>keep-all</code>, <code>break-word</code>)</li>
+    <li><b>강도</b>: <code>break-all</code> ＞ <code>anywhere</code> ≥ <code>break-word</code> ＞ <code>normal</code></li>
+  </ul>
+</body>
+</html>

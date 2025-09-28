@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Example 2 - Box Model</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .example-title {
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .box {
+      background-color: lightblue;
+      border: 3px solid navy;
+      margin: 20px;       /* 바깥 여백 */
+      padding: 20px;      /* 안쪽 여백 */
+    }
+
+    .box-small-padding {
+      background-color: lightgreen;
+      border: 3px solid darkgreen;
+      margin: 20px;
+      padding: 5px;       /* 패딩 줄임 */
+    }
+
+    .box-large-margin {
+      background-color: lightcoral;
+      border: 3px solid darkred;
+      margin: 50px;       /* 마진 크게 */
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Example 2 - Box Model</h1>
+
+  <div class="example-title">기본 박스 (margin:20px, padding:20px)</div>
+  <div class="box">This is a box with background, border, margin, and padding.</div>
+
+  <div class="example-title">패딩 줄인 박스 (padding:5px)</div>
+  <div class="box-small-padding">This box has small padding inside.</div>
+
+  <div class="example-title">마진 늘린 박스 (margin:50px)</div>
+  <div class="box-large-margin">This box has large margin outside.</div>
+</body>
+</html>

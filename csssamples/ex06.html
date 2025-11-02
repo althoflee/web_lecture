@@ -22,12 +22,13 @@
       background-color: #f9f9f9;
     }
 
-    .scroll   { overflow: scroll; }
-    .auto     { overflow: auto; }
-    .hidden   { overflow: hidden; }
+    .scroll   { overflow: scroll; } /* 항상 스크롤바 표시 */
+    .auto     { overflow: auto; } /* 내용이 넘칠 때만 스크롤바 표시 */
+    .hidden   { overflow: hidden; } /* 내용이 넘치면 잘림 */
 
-    .break-all   { word-break: break-all; }
-    .break-word  { overflow-wrap: break-word; }
+    .break-all   { word-break: break-all; } /* 단어 중간에서도 줄바꿈 */
+    .break-word  { overflow-wrap: break-word; } /* 단어가 길면 줄바꿈 */
+    
   </style>
 </head>
 <body>

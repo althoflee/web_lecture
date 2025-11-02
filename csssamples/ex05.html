@@ -10,17 +10,54 @@
       height: 100px;
       background-color: orange;
       position: relative;
-      animation: move 3s infinite alternate;
+      animation: move 3s infinite alternate; /* 기본 애니메이션 속성 */
+      margin-bottom: 20px;
+    }
+
+    .anim-type-1 {
+      animation : move 3s linear infinite alternate; /* 일정한 속도 */
+    }
+    .anim-type-2 {
+      animation : move 3s ease-in infinite alternate; /* 시작은 느리고 나중에 빨라짐 */
+    }
+    .anim-type-3 {
+      animation : move 3s ease-out infinite alternate; /* 시작은 빠르고 나중에 느려짐 */
+    }
+
+    .anim-type-4 {
+      animation-iteration-count: 1; /* 애니메이션 1회 실행 */
+      animation-fill-mode: forwards; /* 애니메이션 종료 후 마지막 상태 유지 */
+    }
+    .anim-type-5 {
+      animation-iteration-count: 1; /* 애니메이션 1회 실행 */
+      
     }
 
     @keyframes move {
-      from { left: 0; }
-      to { left: 200px; }
+      from { left: 0px; }
+      to { left: 300px; }
     }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes scale {
+      from { transform: scale(1); }
+      to { transform: scale(1.5); }
+    }
+
   </style>
 </head>
 <body>
   <h1>CSS Animation Example</h1>
   <div class="moving-box"></div>
+  <div class="moving-box anim-type-1"> anim-type-1 </div>
+  <div class="moving-box anim-type-2"> anim-type-2 </div>
+  <div class="moving-box anim-type-3"> anim-type-3 </div>
+  <div class="moving-box anim-type-4"> fill mode : forwards </div>
+  <div class="moving-box anim-type-5"> fill mode  </div>
+
 </body>
 </html>

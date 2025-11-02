@@ -1,3 +1,3 @@
 export default async function main() {
-    console.log("hello es6");
+    console.log("hello es6");   
 }

@@ -28,10 +28,46 @@
     .right  { text-align: right; }
     .justify{ text-align: justify; }
 
-    /* 수직 정렬 */
-    .top    { line-height: 100px; vertical-align: top; }
-    .middle { line-height: 100px; vertical-align: middle; }
-    .bottom { line-height: 100px; vertical-align: bottom; }
+
+    .horizontal-left {
+      display: flex;
+      justify-content: flex-start; /* 왼쪽 정렬 */
+      align-items: center;    /* 세로 중앙 정렬 */
+    }
+
+    .horizontal-center {
+      display: flex;
+      justify-content: center; /* 가운데 정렬 */
+      align-items: center;    /* 세로 중앙 정렬 */
+    }
+
+    .horizontal-right {
+      display: flex;
+      justify-content: flex-end; /* 오른쪽 정렬 */
+      align-items: center;    /* 세로 중앙 정렬 */
+    }
+
+    /* 수직 정렬은 flexbox를 사용하여 구현 */
+    .vertical-top {
+      display: flex;
+      align-items: flex-start; /* 위쪽 정렬 */
+      justify-content: center; /* 가로 중앙 정렬 */
+    }
+
+    .vertical-center {
+      display: flex;
+      align-items: center; /* 세로 중앙 정렬 */
+      justify-content: center; /* 가로 중앙 정렬 */
+    }
+
+    .vertical-bottom {
+      display: flex;
+      align-items: flex-end; /* 아래쪽 정렬 */
+      justify-content: center; /* 가로 중앙 정렬 */
+    }
+
+
+
   </style>
 </head>
 <body>
@@ -46,15 +82,28 @@
     문단 양쪽이 맞춰져 보입니다.
   </div>
 
+  <h2>수평 정렬 (Flexbox 사용)</h2>
+  <div class="box horizontal-left">
+    Horizontal Left (왼쪽 정렬)
+  </div>
+  <div class="box horizontal-center">
+    Horizontal Center (가운데 정렬)
+  </div>
+  <div class="box horizontal-right">
+    Horizontal Right (오른쪽 정렬)
+  </div>
+
   <h2>수직 정렬</h2>
-  <div class="box" style="display: flex; align-items: flex-start; justify-content: center;">
-    Top Align (위쪽 정렬)
+  <div class="box vertical-top">
+    Vertical Top (위쪽 정렬)  
   </div>
-  <div class="box" style="display: flex; align-items: center; justify-content: center;">
-    Middle Align (세로 중앙 정렬)
+  <div class="box vertical-center">
+    Vertical Center (가운데 정렬)
   </div>
-  <div class="box" style="display: flex; align-items: flex-end; justify-content: center;">
-    Bottom Align (아래쪽 정렬)
+  <div class="box vertical-bottom">
+    Vertical Bottom (아래쪽 정렬)
   </div>
+
+  
 </body>
 </html>

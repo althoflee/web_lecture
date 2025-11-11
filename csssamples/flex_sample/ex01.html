@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dungeon Dragons</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* 전체 화면을 세로 방향 플렉스로 쪼갬 */
+    body {
+      display: flex;
+      flex-direction: column; /* 위에서 아래로: header - main - footer */
+      min-height: 100vh;      /* 화면 높이 채우기 */
+      background: #0000ff;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    header {
+      padding: 16px;
+      background-color: red;
+      /* 필요하면 로고나 메뉴 넣는 공간, 지금은 비워둬도 됨 */
+    }
+
+    /* 중앙 영역: flex-grow로 남는 공간 전부 차지 */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;      /* 수직 중앙 */
+      justify-content: center;  /* 수평 중앙 */
+      text-align: center;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .start {
+      font-size: 24px;
+    }
+
+    footer {
+      padding: 8px;
+      display: flex;
+      justify-content: flex-end; /* 가로 방향 오른쪽 */
+      align-items: center;       /* 세로 방향 아래(단일 행이라 의미상) */
+      font-size: 10px;
+      background-color: rgb(0, 0, 0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- 필요 시 상단 메뉴/로고 -->
+  </header>
+
+  <main>
+    <div>
+      <div class="title">Dungeon Dragons</div>
+      <div class="start">Start Game</div>
+    </div>
+  </main>
+
+  <footer>
+    <span>&copy; 2025 Dungeon Dragons</span>
+  </footer>
+</body>
+</html>

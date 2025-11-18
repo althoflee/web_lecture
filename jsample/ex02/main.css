@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: blue;    
+    height: 100vh;      /* 화면 높이 채우기 */
+    flex-direction: column;
+    font-family: 'RoundedFixedsys';
+
+}
+@font-face {
+    font-family: 'RoundedFixedsys';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+header {    
+    display: flex;
+    padding: 16px;
+    background-color:yellow;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    color: white;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    padding: 16px;
+    background-color: black;
+    color: white;
+}
+
+.title {
+    font-size: 64px;
+}
+
+.menu-item {
+    font-size: 32px;
+}
+
+.menu-item:hover {
+    color: yellow;          /* 원하는 색으로 변경 */
+    transform: scale(1.03); /* 살짝 키우기 (옵션) */
+}
+
+/* 키보드 선택(포커스) 상태 */
+.menu-item.selected {
+    color: yellow;
+}
+
+.container {
+    display: none;
+}

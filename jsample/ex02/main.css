@@ -57,6 +57,17 @@ footer {
     color: yellow;
 }
 
-.container {
+.hide {
     display: none;
+}
+
+#player {
+    width: 16px;
+    height: 16px;
+    background-image: url('/jsample/SGQ_Dungeon/characters/main/elf.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    image-rendering: pixelated;
+
+    transform: scale(4);   /* 4배 확대 */
 }
